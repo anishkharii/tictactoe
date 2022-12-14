@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TIC TAC TOE</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" hrec="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Sono:wght@500&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/c45f99093c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="opac"></div>
+        <div class="starting-menu">
+              <h2 class="logo"><span class="logo-title-1">X</span><span class="logo-title-2">O</span></h2>
+            <div class="player-select-menu">
+                <h6>Pick Player 1's Mark</h6>
+                <div class="player-select">
+                    <span onclick="setLevel(1)" class="player-option active">X</span>
+                    <span onclick="setLevel(2)" class="player-option">O</span>
+                </div>
+            </div>
+        <!--    <button class="btn cpu-btn" onclick="initializeGame()"><i class="fa-solid fa-play"></i> New Game(Vs CPU)</button><br> -->
+            <button class="btn player-btn" onclick="initializeGame()"><i class="fa-solid fa-play"></i> New Game(VS Player)</button>
+        </div>
+        <div class="game-container">
+            <div class="header">
+                <h2 class="logo"><span class="logo-title-1">X</span><span class="logo-title-2">O</span></h2>
+                <span class="turn-detail"><h2 class="player-turn">X</h2> <h4>Turn</h4></span>
+                <button class="restart-btn-primary"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div class="game-main">
+                <div cellIndex= "0" class="game-btn"></div>
+                <div cellIndex= "1" class="game-btn"></div>
+                <div cellIndex= "2" class="game-btn"></div>
+                <div cellIndex= "3" class="game-btn"></div>
+                <div cellIndex= "4" class="game-btn"></div>
+                <div cellIndex= "5" class="game-btn"></div>
+                <div cellIndex= "6" class="game-btn"></div>
+                <div cellIndex= "7" class="game-btn"></div>
+                <div cellIndex= "8" class="game-btn"></div>
+            </div>
+            <div class="score-detail">
+                <div class="score ">X(YOU)<br><span class="user1-score"></span></div>
+                <div class="score ">TIE <br><span class="tie-score"></span> </div>
+                <div class="score ">O(BOT) <br><span class="user2-score"></span></div>
+            </div>
+        </div>
+        <div class="pop-up win-status">
+            <span class="win-detail"></span>
+            <button class="btn quit-btn">QUIT</button>
+            <button class="btn next-btn" >NEXT ROUND</button>
+        <div class="pop-up restart-pop-up">
+            <h1>Restart Game?</h1>
+            <button class="btn cancel-btn" >No, Cancel</button>
+            <button class="btn restart-btn" onclick="restartGame()">Yes, Restart</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!--<script src="script.js"></script>-->
+        <script src="newScript.js"></script>
+    </body>
+</html>
